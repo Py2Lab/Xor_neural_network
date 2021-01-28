@@ -2,7 +2,7 @@ import numpy as np
 import itertools
 #np.random.seed(0)
 
-class XorNeuralNetork:
+class XorNeuralNetwork:
     
     def __init__(self, number_variable):
         self.number_variable = number_variable
@@ -68,8 +68,9 @@ class XorNeuralNetork:
         print("Final hidden weights, biases:{0},{1} ".format(*hidden_weights, *hidden_bias))
         print("Final output weights, biases:{0},{1} ".format(*output_weights, *output_bias))
 
-        print("\nOutput from neural network after 10,000 epochs: ".format(*predicted_output))
+        print("\nOutput from neural network after 10,000 epochs: ")
+        print(*predicted_output)
         
 if __name__ == "__main__":
-    neural_network_two = XorNeuralNetork(4)
+    neural_network_two = XorNeuralNetwork(4)
     neural_network_two.training_algorithm(1000, 0.1)
